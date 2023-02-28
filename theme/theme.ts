@@ -1,7 +1,9 @@
 import { createTheme } from "@mui/material/styles";
 
-// A custom theme for this app
 const theme = createTheme({
+  typography: {
+    fontFamily: "Montserrat",
+  },
   palette: {
     primary: {
       main: "#adcbbe",
@@ -18,6 +20,12 @@ const theme = createTheme({
       300: "#ded6cb",
       600: "#6a6f6d",
       800: "#333a3d",
+    },
+    background: {
+      default: "#efefe3",
+    },
+    text: {
+      primary: "#333a3d",
     },
   },
 });
