@@ -1,5 +1,5 @@
 import * as React from "react";
-import Drawer from "@mui/material/Drawer";
+import Link from "next/link";
 import MenuItem from "@mui/material/MenuItem";
 import { IconButton } from "@mui/material";
 import Dehaze from "@mui/icons-material/Dehaze";
@@ -23,7 +23,9 @@ export default function NavDrawer() {
       </IconButton>
       <Styled.NavDrawer anchor={"right"} open={open} onClose={handleClose}>
         <MenuItem>DEVICES</MenuItem>
-        <MenuItem>HOW IT WORKS</MenuItem>
+        <MenuItem>
+          <Link href="/how-it-works">HOW IT WORKS</Link>
+        </MenuItem>
         <MenuItem>CONTACT</MenuItem>
       </Styled.NavDrawer>
     </>

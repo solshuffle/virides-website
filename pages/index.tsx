@@ -1,10 +1,15 @@
 import Head from "next/head";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
-import App from "../Components/App";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+import App from "../components/App";
 import theme from "../theme/theme";
 
 export default function Home() {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <Head>
@@ -21,12 +26,20 @@ export default function Home() {
       </Head>
 
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <main>
+          {t("greeting")}
           <App />
         </main>
       </ThemeProvider>
     </>
   );
+}
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "home"])),
+      // Will be passed to the page component as props
+    },
+  };
 }
