@@ -5,4 +5,5 @@ function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-export default appWithTranslation(App);
+// export default appWithTranslation(App);
+export default App;
