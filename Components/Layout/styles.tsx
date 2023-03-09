@@ -49,5 +49,6 @@ export const Hero = styled.div`
 export const NavDrawer = styled(Drawer)`
   .MuiDrawer-paper {
     padding: ${theme.spacing(4)};
+    min-width: 20vw;
   }
 `;
