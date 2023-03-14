@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import NavDrawer from "./Drawer";
 import LogoName from "./LogoName";
 import * as Styled from "./styles";

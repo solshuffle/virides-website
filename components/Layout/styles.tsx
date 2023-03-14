@@ -1,12 +1,17 @@
 import styled from "@emotion/styled";
 import theme from "../../theme/theme";
 import img from "../../assets/plant-bg.png";
+import imgMobile from "../../assets/plant-bg-mobile.png";
 import { Drawer } from "@mui/material";
 
 export const Background = styled.div`
-  background-image: url(${img.src});
+  background-image: url(${imgMobile.src});
   background-position: bottom right;
   background-size: cover;
+
+  @media screen and (min-width: 570px) {
+    background-image: url(${img.src});
+  }
 `;
 
 export const Layout = styled.div`
@@ -16,7 +21,6 @@ export const Layout = styled.div`
   height: 100vh;
   max-width: 45rem;
   padding: ${theme.spacing(8)};
-  margin: 0 auto;
 `;
 
 export const Header = styled.div`
@@ -45,5 +49,6 @@ export const Hero = styled.div`
 export const NavDrawer = styled(Drawer)`
   .MuiDrawer-paper {
     padding: ${theme.spacing(4)};
+    min-width: 20vw;
   }
 `;
