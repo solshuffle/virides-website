@@ -1,6 +1,7 @@
 import Head from "next/head";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
+
 import "../i18n/config";
 import App from "../components/App";
 import theme from "../theme/theme";
@@ -22,7 +23,6 @@ export default function Home() {
       </Head>
 
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <main>
           <App />
