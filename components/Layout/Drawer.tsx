@@ -11,6 +11,7 @@ import {
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import * as Styled from "./styles";
+import Link from "next/link";
 
 export default function NavDrawer() {
   const [open, setOpen] = React.useState(false);
@@ -25,7 +26,7 @@ export default function NavDrawer() {
 
   const { i18n, t } = useTranslation();
 
-  function changeLanguage(e) {
+  function changeLanguage(e: React.ChangeEvent<any>) {
     i18n.changeLanguage(e.target.value);
   }
 
@@ -35,9 +36,13 @@ export default function NavDrawer() {
         <DehazeIcon fontSize="large" />
       </IconButton>
       <Styled.NavDrawer anchor={"right"} open={open} onClose={handleClose}>
-        <MenuItem>{t("devices")}</MenuItem>
+        <MenuItem>
+          <Link href={"/devices"}>{t("devices")}</Link>
+        </MenuItem>
         <MenuItem>{t("how-it-works")}</MenuItem>
-        <MenuItem>{t("contact")}</MenuItem>
+        <MenuItem>
+          <Link href={"/contact"}>{t("contact")}</Link>
+        </MenuItem>
 
         <Accordion disableGutters elevation={0} square>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>

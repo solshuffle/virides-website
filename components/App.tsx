@@ -1,7 +1,5 @@
 import Layout from "./Layout";
-import Footer from "./Layout/Footer";
-import Header from "./Layout/Header";
-import Hero from "./Layout/Hero";
+import Hero from "./Home/Hero";
 import * as Styled from "./Layout/styles";
 
 const App: React.FC = () => (

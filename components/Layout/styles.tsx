@@ -21,6 +21,7 @@ export const Layout = styled.div`
   height: 100vh;
   max-width: 45rem;
   padding: ${theme.spacing(8)};
+  font-family: "Montserrat";
 `;
 
 export const Header = styled.div`
@@ -37,12 +38,6 @@ export const Header = styled.div`
 export const Footer = styled.div`
   p {
     font-weight: 600;
-  }
-`;
-
-export const Hero = styled.div`
-  h1 {
-    font-family: "Libre Baskerville", serif;
   }
 `;
 
